@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>بحث في ملف نصي</title>
+</head>
+<body>
+    <h1>بحث في ملف نصي</h1>
+    <form method="post">
+        <label for="keyword">أدخل الكلمة المراد البحث عنها:</label>
+        <input type="text" name="keyword" id="keyword">
+        <button type="submit">بحث</button>
+    </form>
+    <h2>النتائج:</h2>
+    <ul>
+        {% for line_number, line_content in results %}
+            <li>السطر {{ line_number }}: {{ line_content }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
